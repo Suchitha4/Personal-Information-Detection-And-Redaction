@@ -3,8 +3,12 @@ In today’s digital landscape, the protection of sensitive information is a gro
 
 SOFTWARE REQUIREMENTS :
 Operating System :  Windows 11       
-Coding Language :  Python   3.10.7, Html, CSS 
+
+Coding Language :  Python   3.10.7, Html, CSS    
+
 Libraries/Frameworks :  Flask, PyMuPDF (fitz), re (Regular Expressions) 
-Web Server :  Flask development server     
+
+Web Server :  Flask development server 
+
 HARDWARE REQUIREMENTS 
 System  :intel i5 or above 
