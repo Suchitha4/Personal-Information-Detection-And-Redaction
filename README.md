@@ -11,4 +11,5 @@ Libraries/Frameworks :  Flask, PyMuPDF (fitz), re (Regular Expressions)
 Web Server :  Flask development server 
 
 HARDWARE REQUIREMENTS 
+
 System  :intel i5 or above 
