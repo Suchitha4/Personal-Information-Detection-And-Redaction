@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select PII to Redact</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        label {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            align-self: center;
+            margin-top: 20px;
+            background-color: #0078D7;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005BBB;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The following is the detected sensitivie information</h1>
+        <h1>Select PII to Redact</h1>
+        <form action="/redact" method="POST">
+            <input type="hidden" name="input_file" value="{{ input_file }}">
+            {% for pii_type in pii_types %}
+            <label>
+                <input type="checkbox" name="pii_types" value="{{ pii_type }}"> {{ pii_type }}
+            </label>
+            {% endfor %}
+            <input type="submit" value="Redact Selected PII">
+        </form>
+    </div>
+</body>
+</html>
+
+
