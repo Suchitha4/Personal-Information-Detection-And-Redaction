@@ -12,4 +12,11 @@ Web Server :  Flask development server
 
 HARDWARE REQUIREMENTS 
 
-System  :intel i5 or above 
+System  :intel i5 or above
+
+project:
+app.py
+templates
+|
+--select_pii.html
+--uploads.html
